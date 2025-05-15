@@ -40,7 +40,7 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:2636/v1/course/createCourse",
+							"raw": "localhost:2636/v1/course/",
 							"host": [
 								"localhost"
 							],
@@ -48,7 +48,7 @@
 							"path": [
 								"v1",
 								"course",
-								"createCourse"
+								""
 							]
 						}
 					},
@@ -66,7 +66,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:2636/v1/course/getCourses",
+							"raw": "localhost:2636/v1/course/",
 							"host": [
 								"localhost"
 							],
@@ -74,7 +74,7 @@
 							"path": [
 								"v1",
 								"course",
-								"getCourses"
+								""
 							]
 						}
 					},
@@ -92,7 +92,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:2636/v1/course/deleteCourse/68240eec559ce9ed64582e4b",
+							"raw": "localhost:2636/v1/course/682571e8ab2b23c87784b011",
 							"host": [
 								"localhost"
 							],
@@ -100,8 +100,7 @@
 							"path": [
 								"v1",
 								"course",
-								"deleteCourse",
-								"68240eec559ce9ed64582e4b"
+								"682571e8ab2b23c87784b011"
 							]
 						}
 					},
@@ -138,7 +137,7 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:2636/v1/course/updateCourse/6824167d606eb3483935d67a",
+							"raw": "localhost:2636/v1/course/682571e8ab2b23c87784b011",
 							"host": [
 								"localhost"
 							],
@@ -146,8 +145,7 @@
 							"path": [
 								"v1",
 								"course",
-								"updateCourse",
-								"6824167d606eb3483935d67a"
+								"682571e8ab2b23c87784b011"
 							]
 						}
 					},
@@ -178,7 +176,7 @@
 								},
 								{
 									"key": "course",
-									"value": "6824167d606eb3483935d67a",
+									"value": "682564421357000afecd140c",
 									"type": "text"
 								}
 							]
@@ -237,7 +235,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:2636/v1/post/68240fbb559ce9ed64582e6d",
+							"raw": "localhost:2636/v1/post/68256c36f3d94f5744425025",
 							"host": [
 								"localhost"
 							],
@@ -245,7 +243,7 @@
 							"path": [
 								"v1",
 								"post",
-								"68240fbb559ce9ed64582e6d"
+								"68256c36f3d94f5744425025"
 							]
 						}
 					},
@@ -277,7 +275,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/post/68240fbb559ce9ed64582e6d",
+							"raw": "http://localhost:2636/v1/post/68256c36f3d94f5744425025",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -286,7 +284,7 @@
 							"path": [
 								"v1",
 								"post",
-								"68240fbb559ce9ed64582e6d"
+								"68256c36f3d94f5744425025"
 							]
 						}
 					},
@@ -304,15 +302,16 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:2636/v1/post/68240fbb559ce9ed64582e6d",
+							"raw": "localhost:2636/api/v1/post/68256c36f3d94f5744425025",
 							"host": [
 								"localhost"
 							],
 							"port": "2636",
 							"path": [
+								"api",
 								"v1",
 								"post",
-								"68240fbb559ce9ed64582e6d"
+								"68256c36f3d94f5744425025"
 							]
 						}
 					},
@@ -349,7 +348,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/comment/addComment",
+							"raw": "http://localhost:2636/v1/comment",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -357,8 +356,7 @@
 							"port": "2636",
 							"path": [
 								"v1",
-								"comment",
-								"addComment"
+								"comment"
 							]
 						}
 					},
@@ -370,7 +368,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:2636/v1/comment/allComments",
+							"raw": "http://localhost:2636/v1/comment/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -379,7 +377,7 @@
 							"path": [
 								"v1",
 								"comment",
-								"allComments"
+								""
 							]
 						}
 					},
@@ -391,7 +389,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:2636/v1/comment/getComment/68240fee559ce9ed64582e7b",
+							"raw": "http://localhost:2636/v1/comment/68256c26f3d94f5744425023",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -400,8 +398,7 @@
 							"path": [
 								"v1",
 								"comment",
-								"getComment",
-								"68240fee559ce9ed64582e7b"
+								"68256c26f3d94f5744425023"
 							]
 						}
 					},
@@ -433,7 +430,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/comment/updateComment/68240fee559ce9ed64582e7b",
+							"raw": "http://localhost:2636/v1/comment/68240fee559ce9ed64582e7b",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -442,7 +439,6 @@
 							"path": [
 								"v1",
 								"comment",
-								"updateComment",
 								"68240fee559ce9ed64582e7b"
 							]
 						}
@@ -455,7 +451,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:2636/v1/comment/deleteComment/68240fee559ce9ed64582e7b",
+							"raw": "http://localhost:2636/v1/comment/68240fee559ce9ed64582e7b",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -464,7 +460,6 @@
 							"path": [
 								"v1",
 								"comment",
-								"deleteComment",
 								"68240fee559ce9ed64582e7b"
 							]
 						}

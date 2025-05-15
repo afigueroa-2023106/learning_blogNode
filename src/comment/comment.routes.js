@@ -9,10 +9,10 @@ import {
 
 const api = Router()
 
-api.post('/addComment', saveComment)
-api.get('/allComments', getAllComments)
-api.get('/getComment/:id', getComment)
-api.put('/updateComment/:id', updateComment)
-api.delete('/deleteComment/:id', deleteComment)
+api.post('/', saveComment)
+api.get('/', getAllComments)
+api.get('/:id', getComment)
+api.put('/:id', updateComment)
+api.delete('/:id', deleteComment)
 
 export default api

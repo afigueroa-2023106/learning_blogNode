@@ -1,16 +1,16 @@
 import { Router } from "express"
 import {
-  createCourse,
-  getCourses,
-  updateCourse,
-  deleteCourse
+    createCourse,
+    getCourses,
+    updateCourse,
+    deleteCourse
 } from "./course.controller.js"
 
-const api = Router()
+const router = Router()
 
-api.post('/createCourse', createCourse)
-api.get('/getCourses', getCourses)
-api.put('/updateCourse/:id', updateCourse)
-api.delete('/deleteCourse/:id', deleteCourse)
+router.post('/', createCourse)
+router.get('/', getCourses)
+router.put('/:id', updateCourse)
+router.delete('/:id', deleteCourse)
 
-export default api
+export default router
