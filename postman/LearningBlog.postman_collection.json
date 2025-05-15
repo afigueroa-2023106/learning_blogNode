@@ -7,205 +7,6 @@
 	},
 	"item": [
 		{
-			"name": "user",
-			"item": [
-				{
-					"name": "Login",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"var data = JSON.parse(responseBody)\r",
-									"postman.setGlobalVariable('token',data.token)"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "userLoggin",
-									"value": "afigueroaa",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "ANdre-2023106",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:2636/v1/login",
-							"host": [
-								"localhost"
-							],
-							"port": "2636",
-							"path": [
-								"v1",
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "PostAdmin",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "name",
-									"value": "Andre",
-									"type": "text"
-								},
-								{
-									"key": "surname",
-									"value": "Figueroa",
-									"type": "text"
-								},
-								{
-									"key": "username",
-									"value": "afigueroaa",
-									"type": "text"
-								},
-								{
-									"key": "email",
-									"value": "afigueroa@gmail.dom",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "ANdre-2023106",
-									"type": "text"
-								},
-								{
-									"key": "phone",
-									"value": "36947503",
-									"type": "text"
-								},
-								{
-									"key": "role",
-									"value": "ADMIN",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:2636/v1/register",
-							"host": [
-								"localhost"
-							],
-							"port": "2636",
-							"path": [
-								"v1",
-								"register"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GetUsers",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{token}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "localhost:2636/v1/user/",
-							"host": [
-								"localhost"
-							],
-							"port": "2636",
-							"path": [
-								"v1",
-								"user",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GetUserById",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{token}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "localhost:2636/v1/user/682407d73b4dbd751bb90d35",
-							"host": [
-								"localhost"
-							],
-							"port": "2636",
-							"path": [
-								"v1",
-								"user",
-								"682407d73b4dbd751bb90d35"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "PutUser",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{token}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "name",
-									"value": "Alfredo",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:2636/v1/user/updateUser",
-							"host": [
-								"localhost"
-							],
-							"port": "2636",
-							"path": [
-								"v1",
-								"user",
-								"updateUser"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "course",
 			"item": [
 				{
@@ -291,7 +92,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:2636/v1/course/deleteCourse/6824167d606eb3483935d67a",
+							"raw": "localhost:2636/v1/course/deleteCourse/68240eec559ce9ed64582e4b",
 							"host": [
 								"localhost"
 							],
@@ -300,7 +101,7 @@
 								"v1",
 								"course",
 								"deleteCourse",
-								"6824167d606eb3483935d67a"
+								"68240eec559ce9ed64582e4b"
 							]
 						}
 					},
