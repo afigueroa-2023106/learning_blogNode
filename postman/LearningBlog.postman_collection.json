@@ -1,0 +1,676 @@
+{
+	"info": {
+		"_postman_id": "d77c91ee-4cb1-4ebb-ab3d-fc74a00aca3f",
+		"name": "LearningBlog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956970"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = JSON.parse(responseBody)\r",
+									"postman.setGlobalVariable('token',data.token)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "afigueroaa",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ANdre-2023106",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Andre",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Figueroa",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "afigueroaa",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "afigueroa@gmail.dom",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ANdre-2023106",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "36947503",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v1/register",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v1/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v1/user/682407d73b4dbd751bb90d35",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"682407d73b4dbd751bb90d35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Alfredo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v1/user/updateUser",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "course",
+			"item": [
+				{
+					"name": "PostCourse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "JavaScript Básico",
+									"type": "text"
+								},
+								{
+									"key": "instructor",
+									"value": "Josue Noj",
+									"type": "text"
+								},
+								{
+									"key": "durationWeeks",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "level",
+									"value": "Sexto",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v1/course/createCourse",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"course",
+								"createCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCourse",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v1/course/getCourses",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"course",
+								"getCourses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCourse",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v1/course/deleteCourse/6824167d606eb3483935d67a",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"course",
+								"deleteCourse",
+								"6824167d606eb3483935d67a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutCourse",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "JavaScript Básico",
+									"type": "text"
+								},
+								{
+									"key": "instructor",
+									"value": "Josue Noj",
+									"type": "text"
+								},
+								{
+									"key": "durationWeeks",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "level",
+									"value": "Sexto",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v1/course/updateCourse/6824167d606eb3483935d67a",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"course",
+								"updateCourse",
+								"6824167d606eb3483935d67a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "PostPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Este es un post sobre el stack MERN",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Este es un post sobre el stack MERN",
+									"type": "text"
+								},
+								{
+									"key": "course",
+									"value": "6824167d606eb3483935d67a",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/post/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"post",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPost",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v1/post/",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"post",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v1/post/68240fbb559ce9ed64582e6d",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"post",
+								"68240fbb559ce9ed64582e6d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutPost",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Aprendiendo MERN",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Este es un post sobre el stack MERN",
+									"type": "text"
+								},
+								{
+									"key": "course",
+									"value": "663f1d2a8a1e1a001f46c7b3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/post/68240fbb559ce9ed64582e6d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"post",
+								"68240fbb559ce9ed64582e6d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/v1/post/68240fbb559ce9ed64582e6d",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"post",
+								"68240fbb559ce9ed64582e6d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "PostComment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Andre Figueroa",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Me encantó esta actividad, muy interesante.",
+									"type": "text"
+								},
+								{
+									"key": "postId",
+									"value": "68240fbb559ce9ed64582e6d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/comment/addComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"comment",
+								"addComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetComments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2636/v1/comment/allComments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"comment",
+								"allComments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCommentsById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2636/v1/comment/getComment/68240fee559ce9ed64582e7b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"comment",
+								"getComment",
+								"68240fee559ce9ed64582e7b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutComment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Andre Figueroa",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Me encantó esta actividad",
+									"type": "text"
+								},
+								{
+									"key": "postId",
+									"value": "663f1d2a8a1e1a001f46c7b3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/comment/updateComment/68240fee559ce9ed64582e7b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"comment",
+								"updateComment",
+								"68240fee559ce9ed64582e7b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteComment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2636/v1/comment/deleteComment/68240fee559ce9ed64582e7b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"comment",
+								"deleteComment",
+								"68240fee559ce9ed64582e7b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
