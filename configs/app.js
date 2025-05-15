@@ -6,8 +6,6 @@ import morgan from "morgan"
 import courseRoutes from '../src/course/course.routes.js'
 import commentRoutes from '../src/comment/comment.routes.js'
 import postRoutes from '../src/post/post.routes.js'
-import userRoutes from '../src/user/user.routes.js'
-import authRoutes from '../src/auth/auth.routes.js'
 
 const configs = (app)=>{
     app.use(express.json())
@@ -21,8 +19,6 @@ const routes = (app)=>{
     app.use('/v1/course', courseRoutes)
     app.use('/v1/comment', commentRoutes)
     app.use('/v1/post', postRoutes)
-    app.use('/v1/user', userRoutes)
-    app.use('/v1',authRoutes)
 }
 
 

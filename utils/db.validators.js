@@ -70,45 +70,20 @@ export const isValidCommentContent = (content) => {
 
 export const existPostId = async (postId) => {
     customIsValidObjectId(postId);
-    const post = await Post.findById(postId);
+    const post = await Post.findById(postId)
     if (!post) {
-        throw new Error(`Post not found for ID: ${postId}`);
+        throw new Error(`Post not found for ID: ${postId}`)
     }
-};
-
-export const existEmail = async (email, user) => {
-    const alreadyEmail = await User.findOne({ email });
-    if (alreadyEmail && alreadyEmail._id != user.uid) {
-        throw new Error(`Email ${email} is already taken`);
-    }
-};
-
-export const existUsername = async (username, user) => {
-    const alreadyUsername = await User.findOne({ username });
-    if (alreadyUsername && alreadyUsername._id != user.uid) {
-        throw new Error(`Username ${username} is already taken`);
-    }
-};
-
-export const findUser = async (id) => {
-    try {
-        const userExist = await User.findById(id);
-        if (!userExist) return false;
-        return userExist;
-    } catch (err) {
-        console.error(err);
-        return false;
-    }
-};
+}
 
 export const checkCommentAvailability = async (postId) => {
-    customIsValidObjectId(postId);
-    const post = await Post.findById(postId);
+    customIsValidObjectId(postId)
+    const post = await Post.findById(postId)
     if (!post) {
-        throw new Error(`Post not found for ID: ${postId}`);
+        throw new Error(`Post not found for ID: ${postId}`)
     }
-    const existingComment = await Comment.findOne({ postId });
+    const existingComment = await Comment.findOne({ postId })
     if (existingComment) {
-        throw new Error(`This post already has an associated comment`);
+        throw new Error(`This post already has an associated comment`)
     }
-};
+}
