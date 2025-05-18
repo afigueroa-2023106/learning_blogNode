@@ -19,29 +19,13 @@ const postSchema = new Schema(
     date: {
       type: Date,
       default: Date.now,
-    },
-    comments: [
-      {
-        name: {
-          type: String,
-          required: [true, 'Name is required'],
-        },
-        content: {
-          type: String,
-          required: [true, 'Content is required'],
-        },
-        date: {
-          type: Date,
-          default: Date.now,
-        },
-      },
-    ],
+    }
   }
 )
 
 postSchema.methods.toJSON = function() {
   const { ...post } = this.toObject()
-  return post;
+  return post
 }
 
 export default model('Post', postSchema)

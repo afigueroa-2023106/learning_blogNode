@@ -5,12 +5,13 @@ import {
     updateCourse,
     deleteCourse
 } from "./course.controller.js"
+import { courseValidator } from "../../middlewares/validators.js"
 
 const router = Router()
 
-router.post('/', createCourse)
+router.post('/', courseValidator, createCourse)
 router.get('/', getCourses)
-router.put('/:id', updateCourse)
+router.put('/:id', courseValidator, updateCourse)
 router.delete('/:id', deleteCourse)
 
 export default router

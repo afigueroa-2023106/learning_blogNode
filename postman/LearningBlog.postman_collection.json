@@ -19,7 +19,7 @@
 							"urlencoded": [
 								{
 									"key": "title",
-									"value": "JavaScript Básico",
+									"value": "Taller",
 									"type": "text"
 								},
 								{
@@ -29,7 +29,7 @@
 								},
 								{
 									"key": "durationWeeks",
-									"value": "6",
+									"value": "18",
 									"type": "text"
 								},
 								{
@@ -62,7 +62,8 @@
 							{
 								"key": "Authorization",
 								"value": "{{token}}",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"url": {
@@ -88,11 +89,12 @@
 							{
 								"key": "Authorization",
 								"value": "{{token}}",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"url": {
-							"raw": "localhost:2636/v1/course/682571e8ab2b23c87784b011",
+							"raw": "localhost:2636/v1/course/682937d00858e4d166be637f",
 							"host": [
 								"localhost"
 							],
@@ -100,7 +102,7 @@
 							"path": [
 								"v1",
 								"course",
-								"682571e8ab2b23c87784b011"
+								"682937d00858e4d166be637f"
 							]
 						}
 					},
@@ -116,7 +118,7 @@
 							"urlencoded": [
 								{
 									"key": "title",
-									"value": "JavaScript Básico",
+									"value": "Quinto",
 									"type": "text"
 								},
 								{
@@ -137,7 +139,7 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:2636/v1/course/682571e8ab2b23c87784b011",
+							"raw": "localhost:2636/v1/course/682937b90858e4d166be637c",
 							"host": [
 								"localhost"
 							],
@@ -145,7 +147,7 @@
 							"path": [
 								"v1",
 								"course",
-								"682571e8ab2b23c87784b011"
+								"682937b90858e4d166be637c"
 							]
 						}
 					},
@@ -166,17 +168,17 @@
 							"urlencoded": [
 								{
 									"key": "title",
-									"value": "Este es un post sobre el stack MERN",
+									"value": "Blog de Aprendizaje",
 									"type": "text"
 								},
 								{
 									"key": "content",
-									"value": "Este es un post sobre el stack MERN",
+									"value": "Blog de aprendizaje para taller",
 									"type": "text"
 								},
 								{
 									"key": "course",
-									"value": "682564421357000afecd140c",
+									"value": "682938de4651b7da7615bc99",
 									"type": "text"
 								}
 							]
@@ -231,11 +233,12 @@
 							{
 								"key": "Authorization",
 								"value": "{{token}}",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"url": {
-							"raw": "localhost:2636/v1/post/68256c36f3d94f5744425025",
+							"raw": "localhost:2636/v1/post/682939004651b7da7615bc9d",
 							"host": [
 								"localhost"
 							],
@@ -243,7 +246,7 @@
 							"path": [
 								"v1",
 								"post",
-								"68256c36f3d94f5744425025"
+								"682939004651b7da7615bc9d"
 							]
 						}
 					},
@@ -259,23 +262,18 @@
 							"urlencoded": [
 								{
 									"key": "title",
-									"value": "Aprendiendo MERN",
+									"value": "Gestor de Tareas",
 									"type": "text"
 								},
 								{
 									"key": "content",
-									"value": "Este es un post sobre el stack MERN",
-									"type": "text"
-								},
-								{
-									"key": "course",
-									"value": "663f1d2a8a1e1a001f46c7b3",
+									"value": "Gestor de opiniones taller",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/post/68256c36f3d94f5744425025",
+							"raw": "http://localhost:2636/v1/post/682939004651b7da7615bc9d",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -284,7 +282,7 @@
 							"path": [
 								"v1",
 								"post",
-								"68256c36f3d94f5744425025"
+								"682939004651b7da7615bc9d"
 							]
 						}
 					},
@@ -302,16 +300,15 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:2636/api/v1/post/68256c36f3d94f5744425025",
+							"raw": "localhost:2636/v1/post/682939394651b7da7615bca3",
 							"host": [
 								"localhost"
 							],
 							"port": "2636",
 							"path": [
-								"api",
 								"v1",
 								"post",
-								"68256c36f3d94f5744425025"
+								"682939394651b7da7615bca3"
 							]
 						}
 					},
@@ -342,7 +339,7 @@
 								},
 								{
 									"key": "postId",
-									"value": "68240fbb559ce9ed64582e6d",
+									"value": "682939004651b7da7615bc9d",
 									"type": "text"
 								}
 							]
@@ -389,7 +386,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:2636/v1/comment/68256c26f3d94f5744425023",
+							"raw": "http://localhost:2636/v1/comment/68293b704264039688581ab1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -398,7 +395,7 @@
 							"path": [
 								"v1",
 								"comment",
-								"68256c26f3d94f5744425023"
+								"68293b704264039688581ab1"
 							]
 						}
 					},
@@ -421,16 +418,11 @@
 									"key": "content",
 									"value": "Me encantó esta actividad",
 									"type": "text"
-								},
-								{
-									"key": "postId",
-									"value": "663f1d2a8a1e1a001f46c7b3",
-									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/comment/68240fee559ce9ed64582e7b",
+							"raw": "http://localhost:2636/v1/comment/68293b704264039688581ab1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -439,7 +431,7 @@
 							"path": [
 								"v1",
 								"comment",
-								"68240fee559ce9ed64582e7b"
+								"68293b704264039688581ab1"
 							]
 						}
 					},
@@ -451,7 +443,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:2636/v1/comment/68240fee559ce9ed64582e7b",
+							"raw": "http://localhost:2636/v1/comment/68293be3dea72194bcff3934",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -460,7 +452,7 @@
 							"path": [
 								"v1",
 								"comment",
-								"68240fee559ce9ed64582e7b"
+								"68293be3dea72194bcff3934"
 							]
 						}
 					},

@@ -1,18 +1,19 @@
-import { Router } from 'express';
+import { Router } from 'express'
 import {
   createPost,
   getPosts,
   getPostById,
   updatePost,
   deletePost
-} from '../post/post.controller.js';
+} from '../post/post.controller.js'
+import { postValidator, postValidatorPut } from "../../middlewares/validators.js"
 
-const router = Router();
+const router = Router()
 
-router.post('/', createPost);
-router.get('/', getPosts);
-router.get('/:id', getPostById);
-router.put('/:id', updatePost);
-router.delete('/:id', deletePost);
+router.post('/', postValidator, createPost)
+router.get('/', getPosts)
+router.get('/:id', getPostById)
+router.put('/:id', postValidatorPut, updatePost)
+router.delete('/:id', deletePost)
 
-export default router;
+export default router

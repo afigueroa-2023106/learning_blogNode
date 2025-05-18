@@ -4,6 +4,10 @@ const courseSchema = new Schema({
   title: {
     type: String,
     required: [true, 'Title is required'],
+    enum: {
+      values: ['Taller', 'Tecnología', 'Práctica Supervisada'],
+      message: 'El título del curso debe ser "Taller", "Tecnología" o "Práctica Supervisada"'
+    },
     maxLength: [50, 'Title too long']
   },
   instructor: {
