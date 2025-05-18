@@ -4,7 +4,8 @@ import {
   getComment,
   getAllComments,
   updateComment,
-  deleteComment
+  deleteComment,
+  getCommentsByPost
 } from "./comment.controller.js"
 import { commentValidator, commentValidatorPut } from "../../middlewares/validators.js"
 
@@ -13,6 +14,7 @@ const api = Router()
 api.post('/', commentValidator, saveComment)
 api.get('/', getAllComments)
 api.get('/:id', getComment)
+api.get('/by-post/:postId', getCommentsByPost)
 api.put('/:id', commentValidatorPut, updateComment)
 api.delete('/:id', deleteComment)
 

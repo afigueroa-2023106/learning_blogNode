@@ -142,3 +142,20 @@ export const deleteComment = async (req, res) => {
         })
     }
 }
+
+export const getCommentsByPost = async (req, res) => {
+  try {
+    const { postId } = req.params
+    const comments = await Comment.find({ postId }).populate('postId')
+    return res.send({
+      success: true,
+      comments,
+    })
+  } catch (error) {
+    return res.status(500).send({
+      success: false,
+      message: 'Error retrieving comments by post',
+      error,
+    })
+  }
+}
